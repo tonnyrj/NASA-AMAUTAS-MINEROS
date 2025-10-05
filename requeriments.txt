@@ -1,10 +1,7 @@
 streamlit
-pandas
-geopandas
-rasterio
-netCDF4
-shapely
 folium
 streamlit-folium
+pandas
 matplotlib
+geopandas
 gdown
