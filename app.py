@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import geopandas as gpd
 import rasterio
 import netCDF4 as nc
 import folium
@@ -20,7 +19,6 @@ os.makedirs("data", exist_ok=True)
 
 # Archivos en Google Drive (reemplaza por TUS IDs reales)
 datasets = {
-    "pasivos.csv": "ID_PASIVOS",
     "Global_2020_PopulationDensity30sec_GPWv4.tiff": "https://drive.google.com/file/d/1tbJCXkdvPcIslDIpB9nFOiB0QkKaQ1dY/view?usp=drive_link",
     "pm25_global.nc": "https://drive.google.com/drive/folders/1xyJy5mgk0beFkzMWwuV_X3SiI2kG6Cnd?usp=drive_link",
     "provincias.zip": "https://drive.google.com/file/d/1zjx2fEf0DJWsUhOLDPdtGfxyY9uYuHym/view?usp=drive_link",
@@ -38,7 +36,6 @@ for fname, fid in datasets.items():
 # --------------------------
 # CARGAR DATOS
 # --------------------------
-pasivos = pd.read_csv("data/pasivos.csv") if os.path.exists("data/pasivos.csv") else None
 centros = pd.read_csv("data/centros_medicos.csv") if os.path.exists("data/centros_medicos.csv") else None
 
 # Raster población
