@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import rasterio
 import netCDF4 as nc
 import folium
 from folium import Circle, Marker, Icon
