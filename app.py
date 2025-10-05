@@ -1,15 +1,4 @@
-import streamlit as st
-import pandas as pd
-import folium
-from folium import Circle, Marker, Icon
-from streamlit_folium import st_folium
-import matplotlib.pyplot as plt
-import gdown
-import os
 
-# ===============================
-# 1. CONFIGURACIÓN INICIAL
-# ===============================
 st.set_page_config(page_title="Plataforma Pasivos Ambientales", layout="wide")
 os.makedirs("data", exist_ok=True)
 
