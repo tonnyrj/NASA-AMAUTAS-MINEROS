@@ -21,20 +21,16 @@ datasets = {
     "pm25_global.nc": "1x7aPFPN4VtmR4cRlcQM2ZdFiPTfv4Qjc",
     "provincias.zip": "1zjx2fEf0DJWsUhOLDPdtGfxyY9uYuHym"
 }
-
 for fname, fid in datasets.items():
     url = f"https://drive.google.com/uc?id={fid}"
     output = f"data/{fname}"
     if not os.path.exists(output):
         try:
- st.write(f"📥 Descargando {fname} ...")
+            st.write(f"📥 Descargando {fname} ...")
             gdown.download(url, output, quiet=False)
         except Exception as e:
             st.warning(f"No se pudo descargar {fname}: {e}")
 
-# ===============================
-# 2. CARGA DE DATOS
-# ===============================
 pasivos = pd.read_csv("data/pasivos.csv") if os.path.exists("data/pasivos.csv") else None
 centros = pd.read_csv("data/centros_medicos.csv") if os.path.exists("data/centros_medicos.csv") else None
 
