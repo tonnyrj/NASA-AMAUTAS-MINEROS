@@ -1,16 +1,6 @@
 import streamlit as st
 import pandas as pd
-import netCDF4 as nc
-import folium
-from folium import Circle, Marker, Icon
-from streamlit_folium import st_folium
-import gdown
-import os
-import matplotlib.pyplot as plt
 
-# --------------------------
-# CONFIG
-# --------------------------
 st.set_page_config(page_title="🌍 Pasivos Ambientales", layout="wide")
 
 # Crear carpeta local
